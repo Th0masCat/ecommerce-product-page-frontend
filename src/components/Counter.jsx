@@ -23,7 +23,7 @@ export default function Counter() {
         >
 
             <Flex
-            p={'0.4rem'}
+                p={'0.4rem'}
                 gap={'lg'}
                 bg={'siteNeutral.3'}
                 align={'center'}
@@ -43,8 +43,12 @@ export default function Counter() {
                     <Text color="sitePrimary.0">+</Text>
                 </Button>
             </Flex>
-            <Button radius={"md"} fullWidth ml="sm" h={"3rem"} size="md" color="sitePrimary.0">
-                
+            <Button radius={"md"} fullWidth ml="sm" h={"3rem"} size="md" color="sitePrimary.0" styles={{
+                root: {
+                    boxShadow: '0px 10px 10px hsl(25, 100%, 94%)',
+                },
+            }}>
+
                 <Image mr={'1rem'} width={"1rem"} src={cartImg} alt="cart" />
                 <Text color="siteNeutral.4" fw={400} w='100%'>Add to cart</Text>
             </Button>
