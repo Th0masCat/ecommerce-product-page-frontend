@@ -1,6 +1,6 @@
 import { Flex, Text } from "@mantine/core"
-import { Button } from "bootstrap"
 import Counter from "./Counter"
+
 
 export default function ProductInfo() {
     return (
@@ -13,7 +13,7 @@ export default function ProductInfo() {
                 color='sitePrimary.0'
                 fz={'1rem'}
                 fw={'700'}
-                p={0}
+                pb={'0.8rem'}
                 m={0}
             >
                 SNEAKER COMPANY
@@ -22,10 +22,18 @@ export default function ProductInfo() {
                 color='siteNeutral.0'
                 fz={'2rem'}
                 fw={'700'}
+
             >
                 Fall Limited Edition
+            </Text>
+            <Text
+                color='siteNeutral.0'
+                fz={'2rem'}
+                fw={'700'}
+            >
                 Sneakers
             </Text>
+
             <Text
                 pt={'1rem'}
                 color='siteNeutral.1'
@@ -38,18 +46,40 @@ export default function ProductInfo() {
 
             </Text>
 
-            <Text
-                pt={"2rem"}
-                color='siteNeutral.0'
-                fz={'2rem'}
-                fw={'700'}
+            <Flex
+                mt={'1.5rem'}
+                align={'center'}
             >
-                $125
-            </Text>
+
+                <Text
+                    color='siteNeutral.0'
+                    fz={'2rem'}
+                    fw={'700'}
+                >
+                    $125
+                </Text>
+                <Text
+                    color='sitePrimary.0'
+                    fz={'md'}
+                    fw={'700'}
+                    style={
+                        {
+                            backgroundColor: '#ffede0',
+                            borderRadius: '5px',
+                            padding: '0.2rem',
+                            marginLeft: '1rem',
+                        }
+                    }
+                >
+                    50%
+                </Text>
+            </Flex>
+
             <Text
                 color='siteNeutral.2'
                 fz={'md'}
                 fw={'bold'}
+                strikethrough
             >
                 $250
             </Text>

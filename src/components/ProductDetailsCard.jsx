@@ -6,7 +6,6 @@ export default function ProductDetailsCard() {
     return (
         <Flex
             gap={'lg'}
-            m={'lg'}
             align={'center'}
             justify={'center'}
         >
