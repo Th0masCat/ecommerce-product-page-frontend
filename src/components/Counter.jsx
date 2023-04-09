@@ -1,9 +1,11 @@
 import { Button, Text, Flex, Image } from "@mantine/core";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import cartImg from '../../images/icon-cart.svg';
+import { useRecoilState } from "recoil";
+import { Product } from "../atoms/CartState";
 
 export default function Counter() {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useRecoilState(Product);
 
     const increment = () => {
         setCount(count + 1);
