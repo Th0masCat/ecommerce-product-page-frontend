@@ -13,7 +13,6 @@ export default function CartList(props) {
             </Flex>
         );
     }
-
     return (
         <Flex gap="xs" justify={'center'} align={"center"}>
             <Image radius={"sm"} width={"3rem"} src={props.productImg} alt="cart" />

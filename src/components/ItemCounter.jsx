@@ -1,10 +1,10 @@
 import { Button, Text, Flex, Image } from "@mantine/core";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import cartImg from '../../images/icon-cart.svg';
 import { useRecoilState } from "recoil";
 import { Product } from "../atoms/CartState";
 
-export default function Counter() {
+export default function ItemCounter() {
     const [count, setCount] = useState(0);
     const [countCart, setCountCart] = useRecoilState(Product);
 
@@ -41,7 +41,6 @@ export default function Counter() {
                     }
                 }
             >
-
                 <Button color="siteNeutral.3" onClick={count > 0 ? decrement : null}>
                     <Text color="sitePrimary.0">-</Text>
                 </Button>
@@ -55,7 +54,6 @@ export default function Counter() {
                     boxShadow: '0px 10px 10px hsl(25, 100%, 94%)',
                 },
             }}>
-
                 <Image mr={'1rem'} width={"1rem"} src={cartImg} alt="cart" />
                 <Text color="siteNeutral.4" fw={400} w='100%'>Add to cart</Text>
             </Button>

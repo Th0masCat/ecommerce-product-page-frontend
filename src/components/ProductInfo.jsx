@@ -1,6 +1,5 @@
 import { Flex, Text } from "@mantine/core"
-import Counter from "./Counter"
-
+import ItemCounter from "./ItemCounter"
 
 export default function ProductInfo() {
     return (
@@ -83,7 +82,7 @@ export default function ProductInfo() {
             >
                 $250
             </Text>
-            <Counter />
+            <ItemCounter />
         </Flex>
 
     )
