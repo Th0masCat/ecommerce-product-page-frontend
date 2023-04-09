@@ -5,7 +5,8 @@ import { useRecoilState } from "recoil";
 import { Product } from "../atoms/CartState";
 
 export default function Counter() {
-    const [count, setCount] = useRecoilState(Product);
+    const [count, setCount] = useState(0);
+    const [countCart, setCountCart] = useRecoilState(Product);
 
     const increment = () => {
         setCount(count + 1);
@@ -13,6 +14,10 @@ export default function Counter() {
 
     const decrement = () => {
         setCount(count - 1);
+    }
+
+    const handleSubmit = () => {
+        setCountCart(count);
     }
 
     return (
@@ -45,7 +50,7 @@ export default function Counter() {
                     <Text color="sitePrimary.0">+</Text>
                 </Button>
             </Flex>
-            <Button radius={"md"} fullWidth ml="sm" h={"3rem"} size="md" color="sitePrimary.0" styles={{
+            <Button onClick={handleSubmit} radius={"md"} fullWidth ml="sm" h={"3rem"} size="md" color="sitePrimary.0" styles={{
                 root: {
                     boxShadow: '0px 10px 10px hsl(25, 100%, 94%)',
                 },
